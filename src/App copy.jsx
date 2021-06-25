@@ -7,6 +7,8 @@ const App = () => {
   const [listContacts, setListContacts] = useState([]);
   const [listContactTemporaire, setListContactTemporaire] =
     useState(listContacts);
+    let searchStatus = "";
+
   let history = useHistory();
 
   useEffect(() => {
@@ -27,13 +29,14 @@ const App = () => {
 
   const inputChange = (e) => {
     let valuE = e.target.value.toLowerCase();
+    console.log("value contient : ", valuE);
     const filtrE = listContacts.filter((e) => {
       return e.name.toLowerCase().includes(valuE);
     });
-
     setListContactTemporaire(filtrE);
+    searchStatus = filtrE.length === 0 && "null";
+    console.log("Contact filter : ", filtrE.length === 0 && "pas de resultat");
   };
-
   const renderCard = (arr) => {
     return arr.map(
       (
@@ -73,17 +76,16 @@ const App = () => {
             onChange={inputChange}
           />
         </div>
-        {listContactTemporaire.length === 0 ? (
-          <h2 className="text-light ">Pas de resultat</h2>
-        ) : (
-          <>
-            <div className="container">
-              <div className="row justify-content-center py-6">
-                {renderCard(listContactTemporaire)}
-              </div>
-            </div>
-          </>
-        )}
+         { searchStatus ===0  ? ( <h1>Chargement...</h1> ) : (
+           <>
+            {searchStatus ==="null"}
+         <div className="allCard">{renderCard(listContactTemporaire)}</div> 
+         </>
+         )
+         }
+        
+               
+ 
       </div>
     );
   }

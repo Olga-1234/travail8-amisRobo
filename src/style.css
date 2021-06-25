@@ -1,120 +1,148 @@
- @font-face {
-     font-family: "sega";
-     font-weight: 700;
-     src: url(./SEGA.TTF);
- }
+@font-face {
+    font-family: "sega";
+    font-weight: 700;
+    src: url(./SEGA.TTF);
+}
 
- * {
-     margin: 0;
-     padding: 0;
- }
+* {
+    margin: 0;
+    padding: 0;
+}
 
- html {
-     font-size: 62.5%;
-     height: 100vh;
-     background: linear-gradient(90deg, #2d777b, #156d79, #006376, #005873, #004d6f, #00436a, #003763, #062c5a);
+body {
+    background: linear-gradient(90deg, #2d777b, #156d79, #006376, #005873, #004d6f, #00436a, #003763, #062c5a) !important;
 
- }
- .loading
- {
-     font-size: 5rem;
-     font-family: "sega", sans-serif;
-     color: #55cbc5;
-     margin-top: 20%;
-     display: flex;
-     justify-content: center;
+}
 
- }
+html {
+    font-size: 62.5%;
+    height: 100vh;
 
- h1 {
-     font-family: "sega", sans-serif;
-     font-size: 5rem;
-     text-align: center;
-     color: #55cbc5;
-     margin-top: 3%;
- }
+}
 
- .input-search {
-     display: flex;
-     justify-content: center;
-     margin-top: 3%;
- }
+.loading {
+    font-size: 5rem;
+    font-family: "sega", sans-serif;
+    color: #55cbc5;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
 
- .barSearch {
-     width: 250px;
-     padding: 1%;
-     font-size: 1.6rem;
-     margin: 0% auto;
-     border: 1px solid #55cbc5;
+}
 
- }
+h1 {
+    font-family: "sega", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: #55cbc5 !important;
+    margin-top: 3% !important;
+}
+.text-light
+{
+    color: #55cbc5 !important;
+    font-size: 4rem;
 
- @media (max-width : 767px) {
-     .barSearch {
-         width: 200px;
-     }
 
-     .card-class {
-         margin-bottom: 5%;
-     }
- }
+}
 
- @media (min-width : 767px) {
-     .card-class {
-         margin-bottom: 5%;
-     }
- }
+.input-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
 
- .allCard {
-     display: flex;
-     padding-top: 20px;
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: space-evenly;
- }
+.barSearch {
+    width: 250px;
+    padding: 1%;
+    font-size: 1.6rem;
+    margin: 0% auto;
+    border: 1px solid #55cbc5;
 
- .card-class {
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: center;
-     align-content: center;
-     background-color: #9eebcf;
-     width: auto;
-     margin-bottom: 20%;
-     border-radius: .5rem;
-     padding: 0 0 2% 0;
- }
+}
 
- .robot-image {
-     width: 65%;
-     height: auto;
-     padding-bottom: 2%;
- }
+@media (max-width : 767px) {
+    .barSearch {
+        width: 200px;
+    }
 
- h2,
- p {
-     text-align: center;
- }
+    .card-class {
+        margin-bottom: 5%;
+    }
+}
 
- h2 {
-     font-weight: bold;
-     padding-top: 8%;
-     padding-bottom: 5%;
-     font-size: 2rem;
+@media (min-width : 767px) {
+    .card-class {
+        margin-bottom: 5%;
+    }
+}
 
- }
+.allCard {
+    display: flex;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 
- p {
-     font-size: 1.8rem;
-     margin-bottom: 10px;
+}
+
+.card-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #9eebcf !important;
+    width: auto;
+    margin-bottom: 20%;
+    border-radius: .5rem;
+    padding: 0 0 2% 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.robot-image {
+    width: 65%;
+    height: auto;
+    padding-bottom: 2%;
+}
+
+h2,
+p {
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    font-size: 2rem;
+
+}
+
+p {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     font-family: sans-serif;
 
- }
+}
 
- .card-class:hover {
-     transform: scale(1.05);
-     transition: all .3s ease-out;
- }
+.card-class {
+    cursor: pointer;
+}
+
+.card-class:hover {
+    background-color: #ff7300;
+    transform: scale(1.05);
+}
+
+.modal {
+    background-color: red;
+}
+
+.profil-image {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
